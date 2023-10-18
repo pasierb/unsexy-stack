@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
+// just to test routes definition precedence.
 app.get("/hello", (req, res) => {
   res.send("Hello World!");
 });
