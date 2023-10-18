@@ -1,4 +1,6 @@
 import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
+import { Button } from "@/components/ui/button";
+
 import styles from "./globals.css";
 
 export const links = () => [{ rel: "stylesheet", href: styles }];
@@ -13,6 +15,8 @@ export default function App() {
       </head>
       <body>
         <h1>Hello world!</h1>
+        <Button>Click me</Button>
+
         <Outlet />
 
         <Scripts />
