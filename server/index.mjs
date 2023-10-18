@@ -1,6 +1,6 @@
 import express from "express";
 import { createRequestHandler } from "@remix-run/express";
-import * as build from "./build/index.js";
+import * as build from "../build/index.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
