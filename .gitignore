@@ -5,6 +5,9 @@ logs
 # Dependency directories
 node_modules/
 
+# Local development files
+dev.sqlite3
+
 # Built output
 dist/
 build/
