@@ -5,7 +5,9 @@
   "description": "",
   "main": "app/server.mjs",
   "scripts": {
-    "dev": "remix dev -c \"node server/index.mjs\""
+    "start": "node server/index.mjs",
+    "dev": "remix dev -c \"node server/index.mjs\"",
+    "build": "remix build"
   },
   "author": "",
   "license": "ISC",
