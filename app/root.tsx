@@ -1,12 +1,29 @@
-import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+import { Links, Meta, Outlet, Scripts, useLoaderData } from "@remix-run/react";
+import type { LinksFunction, LoaderFunction } from "@remix-run/node";
 import { CookieConsent } from "@/components/cookie-consent";
+import { TopNav } from "@/components/top-nav";
+import { Footer } from "@/components/footer";
+import type { SessionUser } from "@/session";
 
 import styles from "./globals.css";
 
+interface LoaderData {
+  currentUser: SessionUser | null;
+}
+
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
+export const loader: LoaderFunction = function (args): LoaderData {
+  console.log(args.context.user);
+
+  return {
+    currentUser: args.context.user as SessionUser || null,
+  };
+};
+
 export default function App() {
+  const data = useLoaderData<LoaderData>();
+
   return (
     <html>
       <head>
@@ -15,7 +32,10 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <TopNav currentUser={data.currentUser} />
         <Outlet />
+        <Footer />
+
         <CookieConsent />
         <Scripts />
       </body>

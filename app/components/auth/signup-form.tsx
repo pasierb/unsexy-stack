@@ -1,31 +1,35 @@
+import { Form } from "@remix-run/react";
+import * as z from "zod";
 import { useForm } from "react-hook-form";
 import {
   Form as FormProvider,
   FormField,
   FormItem,
-  FormLabel,
   FormControl,
+  FormLabel,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Form } from "@remix-run/react";
 
-export function PasswordLoginForm() {
-  const form = useForm<{ email: string; password: string }>({
-    defaultValues: { email: "", password: "" },
-  });
+const formSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8),
+});
+
+export function SignupForm() {
+  const form = useForm<z.infer<typeof formSchema>>();
 
   return (
     <FormProvider {...form}>
-      <Form reloadDocument action="/auth/login/password" method="post">
+      <Form reloadDocument method="POST" action="/auth/signup/password">
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input {...field} type="email" />
+                <Input type="email" placeholder="Email" {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -38,13 +42,13 @@ export function PasswordLoginForm() {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input {...field} type="password" />
+                <Input type="password" {...field} />
               </FormControl>
             </FormItem>
           )}
         />
 
-        <Button type="submit">Login with Password</Button>
+        <Button type="submit">Sign up</Button>
       </Form>
     </FormProvider>
   );

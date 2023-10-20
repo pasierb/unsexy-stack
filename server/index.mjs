@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Auth routes.
 mountAuth(app, "/auth");
 
-// This is the magic that let's us render our app on the server.
+// Render all other routes with Remix.
 app.all(
   "*",
   createRequestHandler({

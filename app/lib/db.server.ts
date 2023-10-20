@@ -1,1 +1,1 @@
-export { knex } from "../../lib/knex";
+export { knex } from "../../lib/knex.mjs";
