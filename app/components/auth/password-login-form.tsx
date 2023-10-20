@@ -8,16 +8,21 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Form } from "@remix-run/react";
+import { Form, useNavigation } from "@remix-run/react";
 
 export function PasswordLoginForm() {
+  const navigation = useNavigation();
   const form = useForm<{ email: string; password: string }>({
     defaultValues: { email: "", password: "" },
   });
 
   return (
     <FormProvider {...form}>
-      <Form reloadDocument action="/auth/login/password" method="post">
+      <Form
+        reloadDocument
+        action={`/auth/login/password?goto=${navigation.location?.pathname}`}
+        method="post"
+      >
         <FormField
           control={form.control}
           name="email"
