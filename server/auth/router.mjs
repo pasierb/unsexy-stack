@@ -7,14 +7,10 @@ import { authInvalidCredentials } from "../../lib/error-codes.mjs";
 export const router = express.Router();
 
 router.post("/login/password", function loginPassword(req, res, next) {
-  passport.authenticate("local", {}, function (err, user, info, status) {
-    console.log({ err, user, info, status });
-
-    if (!user) {
-      return res.redirect(`/login?error=${authInvalidCredentials}`);
-    } else {
-      return res.redirect("/");
-    }
+  passport.authenticate("local", {
+    session: true,
+    successRedirect: "/",
+    failureRedirect: `/login?error=${authInvalidCredentials}`,
   })(req, res, next);
 });
 

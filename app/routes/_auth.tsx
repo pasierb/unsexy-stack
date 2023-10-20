@@ -15,9 +15,11 @@ export default function AuthRoot() {
   const errorCode = searchParams.get("error");
 
   return (
-    <div>
-      {errorCode && <ErrorAlert />}
-      <Outlet />
-    </div>
+    <main className="container">
+      <div className="max-w-sm mx-auto">
+        {errorCode && <ErrorAlert />}
+        <Outlet />
+      </div>
+    </main>
   );
 }

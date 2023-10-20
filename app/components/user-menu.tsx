@@ -7,21 +7,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import type { SessionUser } from "@/session";
+import { PropsWithChildren } from "react";
 
-interface UserMenuProps {
+interface UserMenuProps extends PropsWithChildren {
   currentUser: SessionUser;
 }
 
 export function UserMenu(props: UserMenuProps) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild>{props.children}</DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>{props.currentUser?.email}</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
         <DropdownMenuItem asChild>
           <a href="/auth/logout">Sign out</a>
         </DropdownMenuItem>

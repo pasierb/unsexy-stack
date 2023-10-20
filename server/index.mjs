@@ -19,9 +19,11 @@ app.all(
   "*",
   createRequestHandler({
     build,
-    getLoadContext: (req) => ({
-      user: req.user, // Set user in Remix context.
-    }),
+    getLoadContext(req) {
+      return {
+        user: req.user, // Set user in Remix context.
+      };
+    },
   })
 );
 

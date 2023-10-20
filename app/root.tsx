@@ -14,10 +14,8 @@ interface LoaderData {
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
 export const loader: LoaderFunction = function (args): LoaderData {
-  console.log(args.context.user);
-
   return {
-    currentUser: args.context.user as SessionUser || null,
+    currentUser: (args.context.user as SessionUser) || null,
   };
 };
 

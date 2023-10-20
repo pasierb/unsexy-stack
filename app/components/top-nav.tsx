@@ -2,6 +2,8 @@ import { Link } from "@remix-run/react";
 import { UserMenu } from "@/components/user-menu";
 import { AuthDialog } from "@/components/auth/auth-dialog";
 import type { SessionUser } from "@/session";
+import { PersonIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
 
 interface TopNavProps {
   currentUser: SessionUser | null;
@@ -21,7 +23,11 @@ export function TopNav(props: TopNavProps) {
 
         <div>
           {currentUser !== null ? (
-            <UserMenu currentUser={props.currentUser!} />
+            <UserMenu currentUser={props.currentUser!}>
+              <Button variant="ghost" size="icon">
+                <PersonIcon />
+              </Button>
+            </UserMenu>
           ) : (
             <AuthDialog>Sign in</AuthDialog>
           )}
