@@ -24,7 +24,7 @@ namespace :node do
   task :restart do
     on roles(:app) do
       within release_path do
-        execute :pm2, "start", "ecosystem.config.js"
+        execute :pm2, "start", "ecosystem.config.mjs"
       end
     end
   end
