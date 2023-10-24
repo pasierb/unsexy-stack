@@ -17,7 +17,7 @@ export function TopNav(props: TopNavProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-end">
-            <span className="text-2xl font-bold">Siteshooter</span>
+            <span className="text-2xl font-bold">Unsexy stack</span>
           </Link>
         </div>
 
