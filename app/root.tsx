@@ -26,6 +26,7 @@ export default function App() {
     <html>
       <head>
         <link rel="icon" href="data:image/x-icon;base64,AA" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
