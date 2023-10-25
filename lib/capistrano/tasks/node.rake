@@ -17,6 +17,7 @@ namespace :node do
     on roles(:app) do
       within release_path do
         execute :npm, "run build"
+        execute :npm, "run", "db:migrate"
       end
     end
   end
