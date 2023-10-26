@@ -7,7 +7,16 @@ export default {
   development: {
     client: "sqlite3",
     connection: {
-      filename: "./dev.sqlite3",
+      filename: "./storage/dev.sqlite3",
+    },
+    migrations: {
+      tableName: "knex_migrations",
+    },
+  },
+  production: {
+    client: "sqlite3",
+    connection: {
+      filename: "./storage/prod.sqlite3",
     },
     migrations: {
       tableName: "knex_migrations",

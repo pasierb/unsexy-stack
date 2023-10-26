@@ -13,7 +13,7 @@ export function mountAuth(app, basePath = "/auth") {
   const SQLiteStore = connectSqlite3(session);
   app.use(
     session({
-      store: new SQLiteStore({ db: "sessions.sqlite3" }),
+      store: new SQLiteStore({ db: "./storage/sessions.sqlite3" }),
       secret: "keyboard cats", // TODO: Change this.
       resave: false,
       saveUninitialized: false,

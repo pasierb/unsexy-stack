@@ -6,6 +6,7 @@ logs
 node_modules/
 
 # Local development files
+storage/
 dev.sqlite3
 sessions.sqlite3
 
