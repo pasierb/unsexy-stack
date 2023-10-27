@@ -7,7 +7,9 @@ namespace :node do
   task :install do
     on roles(:app) do
       within release_path do
-        execute :npm, "install"
+        with NODE_ENV: 'development' do
+          execute :npm, "install"
+        end
       end
     end
   end
@@ -16,7 +18,7 @@ namespace :node do
   task :build do
     on roles(:app) do
       within release_path do
-        execute :npm, "run build"
+        execute :npm, "run", "build"
         execute :npm, "run", "db:migrate"
       end
     end
@@ -25,6 +27,7 @@ namespace :node do
   task :restart do
     on roles(:app) do
       within release_path do
+        execute :pm2, "delete", "ecosystem.config.cjs"
         execute :pm2, "start", "ecosystem.config.cjs"
       end
     end
