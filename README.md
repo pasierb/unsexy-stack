@@ -1,11 +1,78 @@
-# Unsexy-stack
+# 🚀 The UnSexy Stack
 
-## Deployment
+Sometimes, you don't need the glitz and glamour. You need something reliable, something that's stood the test of time. Introducing **The UnSexy Stack** - because practicality is the new sexy!
 
-### PM2
+---
 
-We use PM2 for process monitoring.
+![UnSexy Logo - Because Practical is the New Sexy](./unsexy-logo.png)
 
-TROUBLESHOOTING:
+> _"Old is gold. Reliable technologies that simply get the job done!"_
 
-In case of stuck "launching" state use `pkill -9 PM2; pkill -9 node;`. Reference [GitHub issue](https://github.com/Unitech/pm2/issues/1378).
+---
+
+## 💼 Why "UnSexy"?
+
+In a world where new, shiny technologies emerge every day, it's easy to get distracted. But when it comes to building a solid foundation for your web application, sometimes the tried-and-true methods are the best. That's where the **UnSexy Stack** shines. 
+
+We focus on:
+- ✅ Proven reliability
+- 💰 Cost-effectiveness
+- 🚀 Quick to launch
+- 🛠 Minimum dependencies
+
+## 📚 Stack Overview:
+
+1. **Express.js** - Lightweight, efficient, and versatile application server.
+2. **Passport.js** - Because security matters. Robust authentication for your app.
+3. **Remix/React** - Powering your UI with a sprinkle of Remix magic.
+4. **Tailwind CSS** - Utility-first CSS framework for rapid UI development.
+5. **EC2 with Capistrano** - Seamless deployments without breaking a sweat.
+6. **Nginx** - High performance, stability, and simplicity for your web serving needs.
+
+---
+
+## 🚀 Get Started
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/pasierb/unsexy-stack.git
+   ```
+
+2. **Navigate and Install Dependencies**
+   ```bash
+   cd unsexy-stack
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   
+   Rename `.env.example` to `.env` and fill out necessary details.
+
+4. **Run the Application**
+   ```bash
+   npm run dev
+   ```
+
+Your application is now running on `http://localhost:3000`!
+
+---
+
+## 📝 Documentation
+
+Visit our [wiki](https://github.com/pasierb/unsexy-stack/wiki) for detailed documentation, from setting up to deployment tweaks.
+
+## 🤝 Contributing
+
+We love collaboration! Check our `CONTRIBUTING.md` for guidelines on how to provide your valuable input.
+
+## 🙌 Support
+
+Facing issues? Have a feature request? Head over to the [issues section](https://github.com/pasierb/unsexy-stack/issues).
+
+---
+
+🔗 **Stay Connected**: [Twitter](#) | [LinkedIn](#) | [Website](#)
+
+---
+
+Remember, it's not always about the shiny new things. Sometimes, the most "unsexy" choices are the most effective. Welcome to the **UnSexy Stack**. Where reliability meets modern web development. 🌟
