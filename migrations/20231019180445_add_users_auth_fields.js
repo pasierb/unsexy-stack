@@ -4,8 +4,8 @@
  */
 export const up = (knex) => {
   return knex.schema.table("users", (table) => {
-    table.string("hashed_password").notNullable();
-    table.string("salt").notNullable();
+    table.string("hashed_password");
+    table.string("salt");
   });
 };
 

@@ -3,6 +3,7 @@ import passport from "passport";
 import session from "express-session";
 import connectSqlite3 from "connect-sqlite3";
 import { localStrategy } from "./local-strategy.mjs";
+import { googleStrategy } from "./google-strategy.mjs";
 import { router } from "./router.mjs";
 
 /**
@@ -34,6 +35,7 @@ export function mountAuth(app, basePath = "/auth") {
   });
 
   passport.use("local", localStrategy);
+  passport.use("google", googleStrategy);
 
   app.use(basePath, router);
 }
