@@ -18,7 +18,7 @@ We focus on:
 - ✅ Proven reliability
 - 💰 Cost-effectiveness
 - 🚀 Quick to launch
-- 🛠 Minimum dependencies
+- 🛠 Minimum system dependencies
 
 ## 📚 Stack Overview:
 
