@@ -3,7 +3,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 function ErrorAlert() {
   return (
-    <Alert variant="destructive">
+    <Alert variant="destructive" className="mb-8">
       <AlertTitle>Invalid credentials</AlertTitle>
       <AlertDescription>Email or password invalid</AlertDescription>
     </Alert>
@@ -16,7 +16,7 @@ export default function AuthRoot() {
 
   return (
     <main className="container">
-      <div className="max-w-sm mx-auto">
+      <div className="max-w-md mx-auto">
         {errorCode && <ErrorAlert />}
         <Outlet />
       </div>
