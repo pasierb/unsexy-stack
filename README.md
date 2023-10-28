@@ -22,12 +22,13 @@ We focus on:
 
 ## 📚 Stack Overview:
 
+1. **Remix/React** - Powering your UI with a sprinkle of Remix magic.
+1. **Tailwind CSS** - Utility-first CSS framework for rapid UI development.
 1. **Express.js** - Lightweight, efficient, and versatile application server.
-2. **Passport.js** - Because security matters. Robust authentication for your app.
-3. **Remix/React** - Powering your UI with a sprinkle of Remix magic.
-4. **Tailwind CSS** - Utility-first CSS framework for rapid UI development.
-5. **EC2 with Capistrano** - Seamless deployments without breaking a sweat.
-6. **Nginx** - High performance, stability, and simplicity for your web serving needs.
+1. **Passport.js** - Because security matters. Robust authentication for your app.
+1. **SQLite** - A self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. Perfect for smaller-scale applications.
+1. **EC2 with Capistrano** - Seamless deployments without breaking a sweat.
+1. **Nginx** - High performance, stability, and simplicity for your web serving needs.
 
 ---
 
