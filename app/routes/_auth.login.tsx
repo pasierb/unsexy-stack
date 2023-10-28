@@ -1,6 +1,5 @@
-import { PasswordLoginForm } from "@/components/auth/password-login-form";
+import { SignIn } from "@/components/auth/sign-in";
 
 export default function AuthLogin() {
-
-  return <PasswordLoginForm />;
+  return <SignIn />;
 }

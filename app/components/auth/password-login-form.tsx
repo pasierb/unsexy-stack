@@ -18,19 +18,19 @@ export function PasswordLoginForm() {
 
   return (
     <FormProvider {...form}>
-      <Form
-        reloadDocument
+      <form
         action={`/auth/login/password?goto=${navigation.location?.pathname}`}
         method="post"
+        className="flex flex-col space-y-4"
       >
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input {...field} type="email" />
+                <Input {...field} placeholder="Email" type="email" />
               </FormControl>
             </FormItem>
           )}
@@ -49,8 +49,10 @@ export function PasswordLoginForm() {
           )}
         />
 
-        <Button type="submit">Login with Password</Button>
-      </Form>
+        <div>
+          <Button type="submit">Sign in</Button>
+        </div>
+      </form>
     </FormProvider>
   );
 }

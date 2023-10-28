@@ -17,7 +17,7 @@ const formSchema = z.object({
   email: z.string().email(),
   password: z
     .string()
-    .min(8, { message: "Password must be at least 8 characters" }),
+    .min(6, { message: "Password must be at least 6 characters" }),
 });
 
 export function SignupForm() {
@@ -38,6 +38,7 @@ export function SignupForm() {
         action="/auth/signup/password"
         onSubmit={form.handleSubmit(handleSubmit)}
         ref={formRef}
+        className="flex flex-col space-y-4"
       >
         <FormField
           control={form.control}
@@ -67,7 +68,9 @@ export function SignupForm() {
           )}
         />
 
-        <Button type="submit">Sign up</Button>
+        <div>
+          <Button type="submit">Sign up</Button>
+        </div>
       </form>
     </FormProvider>
   );

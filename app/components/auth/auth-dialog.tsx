@@ -7,9 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PasswordLoginForm } from "@/components/auth/password-login-form";
-import { SignupForm } from "@/components/auth/signup-form";
+import { SignIn } from "@/components/auth/sign-in";
 
 export function AuthDialog(props: PropsWithChildren<{}>) {
   return (
@@ -17,25 +15,11 @@ export function AuthDialog(props: PropsWithChildren<{}>) {
       <DialogTrigger>{props.children}</DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Are you sure absolutely sure?</DialogTitle>
-          <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </DialogDescription>
+          <DialogTitle>Sign in</DialogTitle>
+          <DialogDescription></DialogDescription>
         </DialogHeader>
 
-        <Tabs defaultValue="signin" className="w-full">
-          <TabsList>
-            <TabsTrigger value="signin">Sign in</TabsTrigger>
-            <TabsTrigger value="signup">Sign up</TabsTrigger>
-          </TabsList>
-          <TabsContent value="signin">
-            <PasswordLoginForm />
-          </TabsContent>
-          <TabsContent value="signup">
-            <SignupForm />
-          </TabsContent>
-        </Tabs>
+        <SignIn />
       </DialogContent>
     </Dialog>
   );
