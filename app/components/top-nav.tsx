@@ -4,6 +4,7 @@ import { AuthDialog } from "@/components/auth/auth-dialog";
 import type { SessionUser } from "@/session";
 import { PersonIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import { siteName } from "@/config";
 
 interface TopNavProps {
   currentUser: SessionUser | null;
@@ -17,7 +18,7 @@ export function TopNav(props: TopNavProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-end">
-            <span className="text-2xl font-bold">Unsexy stack</span>
+            <span className="text-2xl font-bold">{siteName}</span>
           </Link>
         </div>
 

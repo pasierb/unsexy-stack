@@ -1,6 +1,6 @@
 # Unsexy-stack
 
-## Production
+## Deployment
 
 ### PM2
 
